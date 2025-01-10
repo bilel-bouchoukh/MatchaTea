@@ -71,7 +71,7 @@
     }
 
     .desc_equipe article{
-        font-size: 15px;
+        font-size: 30px;
         padding-left: 20%;
         padding-right: 20%;
     }
@@ -112,7 +112,7 @@
         padding-right: 20px;
         padding-top: 10px;
         padding-bottom:10px ;
-        font-size: 15px;
+        font-size: 30px;
         text-align: center;
         
     }
@@ -156,6 +156,21 @@
         margin-right: 40%;
         height: 30px;
         width: 80px;
+    }
+
+    .pied_page{
+        width: 100%;
+        height: auto;
+        background-color: #77a464;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .pied_page img{
+        height: 80px;
+        width: 80px;  
+        padding: 10px;
     }
     
 }
@@ -268,6 +283,23 @@
         text-align: center;
         margin-left: 40%;
         margin-right: 40%;
+    }
+
+    .pied_page{
+        width: 100%;
+        height: auto;
+        background-color: #77a464;
+        display: flex;
+        flex-direction: column;
+        gap:3px;
+    }
+
+    .pied_page img{
+        height: 30px;
+        width: 30px;
+        margin-left: 45%;
+        
+        
     }
 
 }
