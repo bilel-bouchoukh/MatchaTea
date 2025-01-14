@@ -16,8 +16,6 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     background-color: #77a464;
-    /* color: blue; */
-    /* padding: 10px 20px; */
     text-align: center;
 }
 
@@ -30,7 +28,6 @@ header {
 }
 
 body{
-    /* background: black; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -92,26 +89,12 @@ body{
     align-items: center;
     max-width: auto;
     background-color: rgba(222, 184, 135, 0.486);
-    /* margin: 20px auto; */
-    /* padding: 20px; */
-    /* background: url(./img_macha_index/tatami_background.jpg) center/cover; 
-    background: linear-gradient(rgba(0, 0, 0, 0.014), rgba(0, 0, 0, 0.027)), 
-                    url('./img_macha_index/tatami_background.jpg');
-    background-size: cover;
-    background-position: center; */
     /* border: 2px black; */
-    /* border-radius: 8px; */
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .item{
     display: flex;
-    /* flex-wrap: nowrap; */
     justify-content: space-around;
-    /* height: 50vh;  */
-    /* width: 50vh;
-    margin: 0px;
-    padding: 0px;  */
     /* border: 5px solid #77a464; */
     text-align: center;
 }
@@ -119,7 +102,7 @@ body{
 #item_text_index{
     height: 18vh;
     width: 75%;
-    font-size: 20px;
+    font-size: clamp(2rem, 2vw, 3rem);
     background-color: rgb(222 184 135 / 72%);
     box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.635);
     border-radius: 5px;
@@ -129,7 +112,6 @@ body{
     display: flex;
     justify-content: space-around;
     height: 18vh;
-    /* width: 20vh; */
     /* border: 5px solid #77a464; */
     background-color: transparent; 
 }
@@ -137,14 +119,16 @@ body{
 .item img {
     max-width: 100%; /* L'image ne dépasse pas la largeur de l'élément */
     max-height: 100%; /* L'image ne dépasse pas la hauteur de l'élément */
-    object-fit: fill;
-}
+    object-fit: contain;
+    }
+
 
 #item_text_index2{
     height: 12vh;
-    /* width: 20vh; */
+    font-size: clamp(2rem, 2vw, 3rem);
     background-color: rgb(222 184 135 / 72%);
     box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.635);
+    padding: 10px;
     border-radius: 5px;
 }
 
@@ -153,14 +137,12 @@ body{
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    background-color: rgba(222, 184, 135, 0.968);
-    /* border: 5px solid #77a464; */
-    /* padding: 20px;  */
+    background-color: transparent;
     width: auto; 
     height: 100%; 
-    margin: 20px;
+    margin: 10px;
+    border-bottom: 1px solid black;
     box-sizing: border-box; 
-    /* border: 5px solid #77a464; */
 }
 
 #container_contact{
@@ -169,33 +151,48 @@ body{
     flex-direction: column;
     height: 100vh;
     width: auto;
-    /* border: 5px solid blue; */
+    background-color: #deb887f7;
+    border: 5px solid #deb887f7;
+    padding: 10px;
 }
 
-/* img{
-    height: 100px;
-    width: 100%;
-} */
-
-
-/* footer { */
-    /* text-align: center;  */
-    /* padding: 10px 0; */
-    /* background: #77a464; */
-    /* color: white; */
-    /* margin-top: 20px;
-/* } */
-
 footer{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     color: black;
     background-color: #77a464;
-    height: 9vh;
+    height: 9vh; */
     /* border: 5px solid white ;   */
+
+    .pied_page{
+        width: 100%;
+        height: auto;
+        background-color: #77a464;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .pied_page img{
+        height: 80px;
+        width: 80px;
+        padding: 10px;
+        margin-left: 45%;
+    }
+
+    .pied_page h2{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .pied_page p{
+        text-align: center;
+    }
+
 } 
 
 
@@ -211,10 +208,6 @@ footer{
         max-height: auto;
      }
 
-    /* .container-slider{
-        height: 2vh;
-    } */
-    
     #item_text_index{
         font-size: 10px;
         height: auto;
@@ -238,6 +231,33 @@ footer{
         box-shadow: none;
         background-color: transparent;
     }
+²
+    footer{
+    .pied_page{
+        width: 100%;
+        height: auto;
+        background-color: #77a464;
+        display: flex;
+        flex-direction: column;
+        gap:3px;
+    }
+
+    .pied_page img{
+        height: 30px;
+        width: 30px;
+        margin-left: 45%;
+
+    }
+
+    .pied_page h2{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .pied_page p{
+        text-align: center;
+    }
+    }
 }
 
 /* Tablettes */
@@ -249,13 +269,9 @@ footer{
         max-width: auto;
         max-height: auto;
      }
-
-    /* .container-slider{
-        height: 2vh;
-    } */
     
     #item_text_index{
-        font-size: 30px;
+        /* font-size: 30px; */
         height: auto;
         width: 100%;
         margin: 50px;
@@ -269,13 +285,13 @@ footer{
         box-shadow: none;
     }
 
-    .item img {
+    /* .item img {
         height: 500px;
         width: 500px;
-    }
+    } */
 
     #item_text_index2{
-        font-size: 30px;
+        /* font-size: 30px; */
         height: auto;
         width: 40%;
         margin: 10px;
@@ -292,14 +308,10 @@ footer{
         flex-direction: row;
         max-width: auto;
         max-height: auto;
-     }
-
-    /* .container-slider{
-        height: 2vh;
-    } */
+    }
     
     #item_text_index{
-        font-size: 30px;
+        /* font-size: 30px; */
         height: auto;
         width: 100%;
         margin: 50px;
@@ -313,13 +325,13 @@ footer{
         box-shadow: none;
     }
 
-    .item img {
+    /* .item img {
         height: 500px;
         width: 500px;
-    }
+    } */
 
     #item_text_index2{
-        font-size: 30px;
+        /* font-size: 30px; */
         height: auto;
         width: 40%;
         margin: 10px;
@@ -327,6 +339,8 @@ footer{
         box-shadow: none;
         background-color: transparent;
     }
+
+    
 }
 
 
@@ -338,13 +352,9 @@ footer{
         max-width: auto;
         max-height: auto;
      }
-
-    /* .container-slider{
-        height: 2vh;
-    } */
     
     #item_text_index{
-        font-size: 30px;
+        /* font-size: 30px; */
         height: auto;
         width: 100%;
         margin: 50px;
@@ -358,13 +368,13 @@ footer{
         box-shadow: none;
     }
 
-    .item img {
+    /* .item img {
         height: 500px;
         width: 500px;
-    }
+    } */
 
     #item_text_index2{
-        font-size: 30px;
+        /* font-size: 30px; */
         height: auto;
         width: 40%;
         margin: 10px;
@@ -374,7 +384,7 @@ footer{
     }
 
     #item_contact{
-        font-size: 20px;
+        font-size: 30px;
         background-color: transparent;
     }
 
@@ -434,7 +444,7 @@ footer{
 }
 
 
-/* Média query pour pc: */
+/* Média query pour Desktop NAV BAR: */
 @media (min-width:390px){
 
 .container-slider{
